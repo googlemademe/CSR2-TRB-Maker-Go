@@ -9,7 +9,7 @@ import (
 )
 
 //Function for Main UI of the program
-func mainUI() {
+func mainUI(email string) {
 
 	//variable for reading user input
 	scanner := bufio.NewScanner(os.Stdin)
@@ -22,6 +22,8 @@ func mainUI() {
 		fmt.Println("How to use:")
 		fmt.Println("Choose from the given menu options")
 		fmt.Println("Have fun with this")
+		fmt.Println()
+		fmt.Println("Licensed to: ", email)
 		fmt.Print("************************************************************************")
 		fmt.Println()
 		fmt.Println()
