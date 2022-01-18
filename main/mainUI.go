@@ -11,11 +11,13 @@ import (
 //Function for Main UI of the program
 func mainUI(email string, dateExp time.Time) {
 
+	//get the Year, Month, Day from time object
 	year, month, day := dateExp.Date()
 
 	//variable for reading user input
 	scanner := bufio.NewScanner(os.Stdin)
 
+	//FOR loop to the MAIN UI interface
 	for {
 		//Main UI menu
 		fmt.Println("************************************************************************")
