@@ -9,7 +9,9 @@ import (
 )
 
 //Function for Main UI of the program
-func mainUI(email string) {
+func mainUI(email string, dateExp time.Time) {
+
+	year, month, day := dateExp.Date()
 
 	//variable for reading user input
 	scanner := bufio.NewScanner(os.Stdin)
@@ -23,7 +25,8 @@ func mainUI(email string) {
 		fmt.Println("Choose from the given menu options")
 		fmt.Println("Have fun with this")
 		fmt.Println()
-		fmt.Println("Licensed to: ", email)
+		fmt.Println("Licensed to:", email)
+		fmt.Printf("Licensed to: %04d/%02d/%02d\n", year, month, day)
 		fmt.Print("************************************************************************")
 		fmt.Println()
 		fmt.Println()
